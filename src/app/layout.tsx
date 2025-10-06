@@ -1,11 +1,11 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import { AuthProvider } from '@/providers/auth-provider'
+import { Navbar } from '@/components/ui/navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Echo - Profile and Project Network',
+  title: 'Echo - The Professional Home for Builders and Creators',
   description: 'A creator-first platform for showcasing work and connecting with other builders',
 }
 
@@ -17,9 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AuthProvider>
-          {children}
-        </AuthProvider>
+        <Navbar />
+        {children}
       </body>
     </html>
   )
